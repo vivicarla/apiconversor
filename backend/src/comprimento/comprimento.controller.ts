@@ -11,6 +11,20 @@ export class ComprimentoController {
             unidade: 'km'
         };
     }
+    @Get('metros-para-milhas/:valor')
+    getMilhas(@Param('valor', ParseFloatPipe) v: number) {
+        return {
+            resultado: this.service.metrosParaMilhas(v),
+            unidade: 'milhas'
+        };
+    }
+    @Get('metros-para-pes/:valor')
+    getPes(@Param('valor', ParseFloatPipe) v: number) {
+        return {
+            resultado: this.service.metrosParaPes(v),
+            unidade: 'pés'
+        };
+    }
 }
 
 
