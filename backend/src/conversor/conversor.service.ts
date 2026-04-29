@@ -37,5 +37,27 @@ export class ConversorService {
         // 1 m² = 10.76391 ft²
         const pes = 10.76391;
         return (valor * pes).toFixed(9);
+    };
+    //temperatura
+    celsiusParaFarenheit(valor: number) {
+        return valor * (9/5) + 32
+    };
+    //temperatura
+    celsiusParaKelvin(valor: number) {
+        return valor + 273.15
+    };
+    //temperatura
+    farenheitParaCelsius(valor: number) {
+        return ((valor - 32 ) * (5/9)).toFixed(4);
+    };
+    //velocidade
+    kmhParaMs(valor: number) {
+        return (valor / 3.6 ).toFixed(2);
+    };
+    kmhParaMph(valor: number) {
+        return (valor * 0.6214 ).toFixed(2);
+    };
+    nosParaKmh(valor: number) {
+        return (valor * 1.852 ).toFixed(2);
     }
 }
